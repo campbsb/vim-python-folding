@@ -1,7 +1,7 @@
 # vim-python-folding
 Vim ftplugin for smart Python code folding
 
-Simply copy the file into your .vim/ftplugin/python directory
+Simply copy the pythonfolding.vim file into your .vim/ftplugin/python directory
 
 You will want the following lines in your .vimrc:
 ```
