@@ -1,20 +1,27 @@
 " Python Folding macros for Vim
 " Copy to ~/.vim/ftplugin/python/pythonfolding.vim
-" Steve Campbell Dec 2019
+" Requires the following in your .vimrc, which are required for any filetype
+" specific configuration:
+"   set nocompatible
+"   filetype plugin indent on
 "
-" Fold levels:
+" Shout out to Steve Losh for a great tutorial - https://learnvimscriptthehardway.stevelosh.com/chapters/49.html
+"
+" Steve Campbell Dec 2019
+
+" # Some notes to help with the code below
+" ## Fold levels:
 "   '-1' - undefined - same as the line above or below, whichever is smaller.
 "   '0'  - not in a fold
 "   '>1'  - open a fold of level 1
 "   Avoid -1 to get good performance
 "
-" Variable types:
+" ## Variable types:
 "   a: function parameter
 "   w: Local to editor window
 "   l: local to function
 "   v: predefined Vim variable
 "
-" Shout out to Steve Losh for a great tutorial - https://learnvimscriptthehardway.stevelosh.com/chapters/49.html
 
 setlocal foldmethod=expr
 setlocal foldexpr=GetPythonFold()
